@@ -1,15 +1,17 @@
-import "./App.css"
-import MyContainer from "./layout/MyContainer"
-import Login from "./components/Login"
-import { Outlet } from "react-router-dom"
+import "./App.css";
+import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
+import { Box, Container } from "@mui/material";
 
 function App() {
   return (
-    <>
-      <h1>Header</h1>
-      <Outlet />
-    </>
-  )
+    <Box>
+      <Header />
+      <Container>
+        <Outlet />
+      </Container>
+    </Box>
+  );
 }
 
-export default App
+export default App;
